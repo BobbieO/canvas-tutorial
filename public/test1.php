@@ -32,6 +32,38 @@ $text = "Measuring programming progress by lines of code is like measuring aircr
 - $new_author.";
 
 echo $text;
+echo "<br>";
+
+
+$some_guy = "Bob";
+
+echo <<<_END
+this is a test
+of the heredoc
+capabilities
+-$some_guy.
+_END;
+
+echo "<br>";
+
+
+echo "This is line " . __LINE__ . " of file " . __FILE__;
+
+echo "<br>";
+
+function longdate($timestamp)
+{
+    $temp = date("l F jS Y", $timestamp);
+    return "The date is $temp";
+}
+
+echo longdate(time());
+
+
+
+
+
+
 
 
 ?>
